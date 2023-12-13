@@ -60,7 +60,7 @@ app.post("/api/deleteNote", async (req, res) => {
 
 app.post("/api/clearNotes", async (req, res) => {
     console.log("clearNotes req received");
-    // Drop the collection
+    // Remove all items from the collection
     const result = await db.collection("notes").deleteMany({});
     res.send(result);
 })
